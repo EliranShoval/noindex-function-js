@@ -7,7 +7,7 @@ function setNoIndex(){
   var headNoIndex = document.getElementsByTagName('head')[0];
   var noIndexTag = document.createElement('meta');
   noIndexTag.setAttribute('name','robots');
-  noIndexTag.setAttribute('content','noindex follow');
+  noIndexTag.setAttribute('content','noindex, follow');
   headNoIndex.appendChild(noIndexTag);
 }
 
