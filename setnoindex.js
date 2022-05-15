@@ -1,14 +1,18 @@
+function noIndexTag(){
+    var setTag = document.body.querySelector('p').innerText;
+    //console.log(setTag);
 
-
-//Copy this function with script tags - <script></script>
-//Feel free to try it! good luck :)
-function setNoIndex(){
-
-  var headNoIndex = document.getElementsByTagName('head')[0];
-  var noIndexTag = document.createElement('meta');
-  noIndexTag.setAttribute('name','robots');
-  noIndexTag.setAttribute('content','noindex, follow');
-  headNoIndex.appendChild(noIndexTag);
+    if(setTag.length >0){
+        let createElemIndex = document.createElement('meta');
+        createElemIndex.setAttribute('name','robots');
+        createElemIndex.setAttribute('content','index,follow');
+        document.head.append(createElemIndex);
+    }
+    else{
+        let createElemNoIndex = document.createElement('meta');
+        createElemNoIndex.setAttribute('name','robots');
+        createElemNoIndex.setAttribute('content','noindex,follow');
+        document.head.append(createElemNoIndex);
+    }
 }
-
-setNoIndex();
+noIndexTag();
